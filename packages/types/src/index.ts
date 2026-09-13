@@ -1,12 +1,9 @@
-// ─── Tipos de dominio compartidos ────────────────────────────────────────────
-// Los tipos generados por Supabase se agregan con: pnpm db:types
-// (genera packages/types/src/database.ts automáticamente)
-
 export type Platform = 'whatsapp' | 'instagram' | 'facebook' | 'mock'
 export type Plan = 'starter' | 'pro' | 'business'
 export type ConversationStatus = 'bot' | 'human' | 'closed'
 export type StockStatus = 'available' | 'out_of_stock' | 'on_request'
 export type BotTone = 'formal' | 'friendly' | 'casual'
+export type { Database, Json } from './database'
 
 // ─── Message Queue ────────────────────────────────────────────────────────────
 

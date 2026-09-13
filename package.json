@@ -7,7 +7,7 @@
     "lint": "turbo lint",
     "format": "prettier --write \"**/*.{ts,tsx,json,md}\"",
     "format:check": "prettier --check \"**/*.{ts,tsx,json,md}\"",
-    "db:types": "supabase gen types typescript --local > packages/types/src/database.ts",
+    "db:types": "supabase gen types typescript --linked > packages/types/src/database.ts",
     "clean": "turbo clean && rm -rf node_modules"
   },
   "devDependencies": {
