@@ -8,7 +8,7 @@ COPY . .
 ENV COREPACK_PM_ON_FAIL=ignore
 RUN pnpm install --frozen-lockfile
 RUN pnpm --filter @respondr/worker build
-RUN pnpm --filter @respondr/worker deploy --prod --legacy /app/deploy
+RUN pnpm --filter @respondr/worker --config.force-legacy-deploy=true deploy --prod /app/deploy
 
 FROM node:20-alpine AS runner
 WORKDIR /app
