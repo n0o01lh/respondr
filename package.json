@@ -10,6 +10,13 @@
     "db:types": "supabase gen types typescript --linked > packages/types/src/database.ts",
     "clean": "turbo clean && rm -rf node_modules"
   },
+  "pnpm": {
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "msgpackr-extract",
+      "unrs-resolver"
+    ]
+  },
   "devDependencies": {
     "@typescript-eslint/eslint-plugin": "^7.0.0",
     "@typescript-eslint/parser": "^7.0.0",
