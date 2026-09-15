@@ -4,7 +4,7 @@ RUN npm install -g pnpm
 FROM base AS builder
 WORKDIR /app
 COPY . .
-RUN pnpm install --frozen-lockfile
+RUN pnpm install --frozen-lockfile --pm-on-fail=ignore
 RUN pnpm --filter @respondr/worker build
 RUN pnpm --filter @respondr/worker deploy --prod --legacy /app/deploy
 
