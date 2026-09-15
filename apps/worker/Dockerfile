@@ -6,7 +6,7 @@ FROM base AS builder
 WORKDIR /app
 COPY . .
 ENV COREPACK_PM_ON_FAIL=ignore
-RUN pnpm install --frozen-lockfile --dangerously-allow-all-builds --pm-on-fail=ignore
+RUN pnpm install --frozen-lockfile
 RUN pnpm --filter @respondr/worker build
 RUN pnpm --filter @respondr/worker deploy --prod --legacy /app/deploy
 
